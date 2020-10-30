@@ -12,12 +12,16 @@
 
 {% block content %}
 
+<div class="container">
+    <h3>Your coins: {{ curuser.coins }}</h3>
+</div>
+
 <div class="container my-3 table-responsive">
     <table class="table table-condensed table-hover">
         <thead>
             <tr>
               <th><h1><span><b>UserName</b></span></h1></th>
-              <th><h1><span><b>Email Address</b></span></h1></th>
+<!--              <th><h1><span><b>Email Address</b></span></h1></th>-->
               <th><h1><span><b>Coins</b></span></h1></th>
             </tr>
         </thead>
@@ -27,9 +31,9 @@
                     <td>
                         <h3>{{user.user.username}}</h3>
                     </td>
-                    <td>
-                        <h3>{{user.user.email}}</h3>
-                    </td>
+<!--                    <td>-->
+<!--                        <h3>{{user.user.email}}</h3>-->
+<!--                    </td>-->
                     <td>
                         <h3>{{user.coins}}</h3>
                     </td>

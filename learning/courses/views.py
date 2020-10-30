@@ -68,9 +68,12 @@ def enrollment(request, course_id):
     enr.course = cour
     enr.student = request.user
     enr.save()
+    cour.count = cour.count+1
+    cour.save()
     material = Material.objects.filter(course=cour)
-    tests = Test.objects.filter(course=cour)
-    return render(request, 'courmat.html', {'course': cour, 'material': material, 'tests': tests})
+    assign = CreateAssignment.objects.filter(info=cour)
+    test = CreateQuiz_1.objects.filter(info=cour)
+    return render(request, 'courmat.html', {'course': cour, 'material': material, 'tests': test, 'assign': assign})
 
 @login_required
 def courmat(request, course_id):

@@ -4,5 +4,6 @@ from discussions.models import Reward
 
 def leaderHome(request):
     users = Reward.objects.all()
-    context = {'users' : users}
+    curuser = Reward.objects.filter(user=request.user).first()
+    context = {'users' : users, 'curuser': curuser}
     return render(request, 'leaderboard_home.html', context)
