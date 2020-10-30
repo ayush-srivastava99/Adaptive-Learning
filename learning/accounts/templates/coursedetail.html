@@ -38,7 +38,7 @@
 
 									  <th >Name</th>
 									  <th >Date of Taken</th>
-									  <th >Completed</th>
+<!--									  <th >Completed</th>-->
                                         <th >Contact him</th>
 									</tr>
 								  </thead>
@@ -47,7 +47,7 @@
 									<tr>
 									  <td>{{ st.student.username }}</td>
 									  <td>{{ st.date }}</td>
-									  <td>{{ st.done }}</td>
+<!--									  <td>{{ st.done }}</td>-->
 									  <td> <a class="btn text-uppercase" href="{% url 'accounts:contact' st.student.id %}">Contact</a></td>
 									</tr>
                                   {% endfor %}
